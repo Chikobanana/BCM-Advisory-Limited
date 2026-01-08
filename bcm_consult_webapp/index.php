@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCM Consult - Event Management Excellence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1a1a1a;
+        }
+
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1a1a1a;
+        }
+
+        .btn-contact {
+            background: #1a1a1a;
+            color: #fff !important;
+            padding: 0.75rem 1.8rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 5rem 5% 3rem;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f3e5f5 50%, #fff3e0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .watch-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #4CAF50;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .watch-btn:hover {
+            background: #45a049;
+        }
+
+        .hero-images {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        .rounded-image {
+            width: 180px;
+            height: 320px;
+            border-radius: 100px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .rounded-image:nth-child(1) {
+            background: linear-gradient(135deg, #c8e6c9, #81c784);
+        }
+
+        .rounded-image:nth-child(2) {
+            background: linear-gradient(135deg, #b39ddb, #9575cd);
+            margin-top: 50px;
+        }
+
+        .rounded-image:nth-child(3) {
+            background: linear-gradient(135deg, #ffccbc, #ff8a65);
+            margin-top: -30px;
+        }
+
+        .rounded-image:hover {
+            transform: translateY(-15px) rotateY(10deg) scale(1.05);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        /* Clients Section */
+        .clients {
+            background: #e8f4f8;
+            padding: 2.5rem 5%;
+            margin: 3rem 0;
+            border-radius: 100px;
+            max-width: 1400px;
+            margin: 3rem auto;
+        }
+
+        .clients-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .client-logo {
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .section-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-arrows {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .nav-arrow:hover {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .service-content p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 5rem 5%;
+            background: #f8f9fa;
+        }
+
+        .stats-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .stats-images {
+            display: flex;
+            gap: 1.5rem;
+            perspective: 1000px;
+        }
+
+        .stat-image {
+            width: 200px;
+            height: 280px;
+            border-radius: 100px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .stat-image:nth-child(1) {
+            background: linear-gradient(135deg, #c8e6c9, #81c784);
+        }
+
+        .stat-image:nth-child(2) {
+            margin-top: 60px;
+            background: linear-gradient(135deg, #b39ddb, #9575cd);
+        }
+
+        .stat-image:hover {
+            transform: translateY(-20px) rotateY(15deg) scale(1.08);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .stats-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .stats-text p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .stat-item {
+            margin-bottom: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            min-width: 80px;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .step-content p {
+            color: #666;
+        }
+
+        .process-image {
+            background: linear-gradient(135deg, #e8f4f8, #c8e6f0);
+            border-radius: 30px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-image:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 5%;
+            background: #1a3a3a;
+            color: #fff;
+        }
+
+        .projects-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .projects p {
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        .projects-video {
+            background: linear-gradient(135deg, #2a4a4a, #1a3535);
+            border-radius: 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .projects-video:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        .projects-video:hover .play-btn {
+            transform: scale(1.2);
+        }
+
+        .play-btn {
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .features > p {
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            transition: all 0.5s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: rotateY(360deg) scale(1.1);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.5s ease;
+        }
+
+        .blog-card:hover .blog-image {
+            transform: scale(1.1);
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .read-more {
+            color: #666;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 4rem 5%;
+            background: #1a3a3a;
+            color: #fff;
+        }
+
+        .newsletter-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+        }
+
+        .newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background: #fff;
+            color: #1a3a3a;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column a {
+            color: #b0b0b0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+        }
+
+        .chatbot-container {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 380px;
+            height: 550px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .chatbot-container.active {
+            display: flex;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            font-size: 1.2rem;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.bot {
+            justify-content: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 0.8rem 1.2rem;
+            border-radius: 15px;
+            line-height: 1.5;
+        }
+
+        .message.bot .message-content {
+            background: white;
+            color: #1a1a1a;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .quick-reply {
+            background: white;
+            border: 1px solid #667eea;
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .quick-reply:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .chatbot-input {
+            padding: 1rem;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 0.95rem;
+        }
+
+        .chatbot-input button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .chatbot-input button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 5px;
+            padding: 1rem;
+        }
+
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out;
+        }
+
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .hero-content, .stats-content, .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid, .features-grid, .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .newsletter-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+
+            .chatbot-container {
+                width: calc(100% - 40px);
+                right: 20px;
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+      <a href="#home" class="logo">
+            <img src="bcm_logo.png" alt="BCM Logo" class="logo-image">
+            BCM Consult
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact" class="btn-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>We're a professional event management agency.</h1>
+                <p>BCM Consult delivers seamless services that redefine excellence in the events and professional support sectors across Zambia and beyond.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn-primary">Our Services</a>
+                    <a href="#" class="watch-btn">▶ Watch Video</a>
+                </div>
+            </div>
+            <div class="hero-images">
+                <div class="rounded-image"></div>
+                <div class="rounded-image"></div>
+                <div class="rounded-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="clients-logos">
+            <div class="client-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                WWF
+            </div>
+            <div class="client-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/></svg>
+                GIZ
+            </div>
+            <div class="client-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                UNDP
+            </div>
+            <div class="client-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                Oxfam
+            </div>
+            <div class="client-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                UNFCCC
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <div>
+                <p class="section-label">OUR SERVICES</p>
+                <h2 class="section-title">We offer a wide range of<br>professional services</h2>
+            </div>
+            <div class="nav-arrows">
+                <button class="nav-arrow">←</button>
+                <button class="nav-arrow">→</button>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image"></div>
+                <div class="service-content">
+                    <h3>Moderation & Facilitation</h3>
+                    <p>Professional moderators to ensure your events achieve their objectives with structured engagement.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image"></div>
+                <div class="service-content">
+                    <h3>Event Planning & Design</h3>
+                    <p>Comprehensive consultation to refine goals, define parameters, and plan seamless execution.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image"></div>
+                <div class="service-content">
+                    <h3>Report Writing</h3>
+                    <p>Experienced personnel skilled in capturing proceedings and producing comprehensive reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-content">
+            <div class="stats-images">
+                <div class="stat-image"></div>
+                <div class="stat-image"></div>
+            </div>
+            <div class="stats-text">
+                <p class="section-label">ABOUT US</p>
+                <h2>We are an extension of your creative team</h2>
+                <p>BCM Consult is dedicated to contributing to Africa's economic growth by creating meaningful employment opportunities and actively engaging in wealth creation.</p>
+                <div class="stat-item">
+                    <div class="stat-number">48%</div>
+                    <p class="stat-label">Increase in client satisfaction through our innovative approach to event management.</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">26%</div>
+                    <p class="stat-label">Growth in successful event outcomes year over year across Africa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="process-grid">
+            <div class="process-steps">
+                <div>
+                    <p class="section-label">OUR APPROACH</p>
+                    <h2 class="section-title">A simple, yet effective three step process</h2>
+                </div>
+                <div class="step">
+                    <div class="step-number">01.</div>
+                    <div class="step-content">
+                        <h3>Project Idea</h3>
+                        <p>We collaborate with clients to understand their vision, define parameters, and establish clear objectives for successful outcomes.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02.</div>
+                    <div class="step-content">
+                        <h3>Brainstorming</h3>
+                        <p>Our team develops creative solutions through strategic planning workshops, turning discussions into actionable insights.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03.</div>
+                    <div class="step-content">
+                        <h3>Execution</h3>
+                        <p>We deliver flawless execution with precision, ensuring every detail aligns with your vision and exceeds expectations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="process-image"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="projects-content">
+            <p class="section-label">OUR WORK</p>
+            <h2>A quick glance of our<br>past projects</h2>
+            <p>From UNFCCC at COP Marrakech to strategic workshops across Africa, we've delivered excellence.</p>
+            <div class="projects-video">
+                <div class="play-btn">▶</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Core values that<br>guide our work</h2>
+        <p>At BCM Consult, our values drive everything we do—from integrity and excellence to innovation and sustainability.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                </div>
+                <h3>Integrity</h3>
+                <p>Upholding transparency, honesty, and ethical standards in all our interactions with clients.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                </div>
+                <h3>Excellence</h3>
+                <p>Striving for superior quality and delivering exceptional results in every project we undertake.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/>
+                    </svg>
+                </div>
+                <h3>Innovation</h3>
+                <p>Embracing creativity and forward-thinking solutions to exceed client expectations consistently.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog">
+        <div class="section-header">
+            <div>
+                <p class="section-label">NEWS & ARTICLES</p>
+                <h2 class="section-title">Take a look at our latest<br>insights and resources</h2>
+            </div>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image"></div>
+                <div class="blog-content">
+                    <span class="blog-tag">BLOG</span>
+                    <h3>Mastering the art of event moderation and facilitation</h3>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image"></div>
+                <div class="blog-content">
+                    <span class="blog-tag">RESOURCES</span>
+                    <h3>Best practices for professional report writing</h3>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image"></div>
+                <div class="blog-content">
+                    <span class="blog-tag">GUIDE</span>
+                    <h3>Transforming your business work into thriving success</h3>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="contact">
+        <div class="newsletter-content">
+            <div>
+                <h2>Sign up for our newsletter</h2>
+                <p>Stay updated with our latest insights and event management tips.</p>
+                <div class="social-icons">
+                    <div class="social-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                        </svg>
+                    </div>
+                    <div class="social-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                        </svg>
+                    </div>
+                    <div class="social-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" id="emailInput">
+                    <button onclick="submitNewsletter()">Subscribe</button>
+                </div>
+                <div class="footer-links" style="margin-top: 3rem;">
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="tel:+260972761436">+260 972 761 436</a></li>
+                            <li><a href="mailto:mumbab2014@gmail.com">mumbab2014@gmail.com</a></li>
+                            <li><a href="#">Plot 269 Ibex Hill, Lusaka</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Event Planning</a></li>
+                            <li><a href="#">Moderation</a></li>
+                            <li><a href="#">Report Writing</a></li>
+                            <li><a href="#">Photography</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Values</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Vision</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
+    
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <h3>BCM Consult Assistant</h3>
+            <button class="chatbot-close" onclick="toggleChatbot()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot">
+                <div class="message-content">
+                    Hello! 👋 I'm your BCM Consult assistant. How can I help you today?
+                    <div class="quick-replies">
+                        <button class="quick-reply" onclick="sendQuickReply('services')">Our Services</button>
+                        <button class="quick-reply" onclick="sendQuickReply('pricing')">Pricing</button>
+                        <button class="quick-reply" onclick="sendQuickReply('contact')">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeypress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+                                                                                                                                                                                               
+    <!-- <script>               
+        // Chatbot Functionality
+        const chatbotKnowledge = {
+            'services': {
+                response: "We offer comprehensive event management services including:\n\n• Moderation & Facilitation\n• Event Planning & Design\n• Report Writing & Documentation\n• Diary Management\n• Photography Services\n• Strategic Workshop Facilitation\n• Thematic Event Conceptualization\n• Impact Reporting & Analytics\n• Podcast Production\n\nWhich service interests you?",
+                quickReplies: ['Moderation', 'Event Planning', 'Photography']
+            },
+            'pricing': {
+                response: "Our pricing is customized based on your specific needs and event requirements. Factors include:\n\n• Event duration and complexity\n• Number of attendees\n• Services required\n• Location\n\nWould you like to schedule a consultation to discuss your project?",
+                quickReplies: ['Yes, schedule consultation', 'Tell me more']
+            },
+            'contact': {
+                response: "You can reach us through:\n\n📞 Phone: +260 972 761 436\n📧 Email: mumbab2014@gmail.com\n📍 Address: Plot 269 Ibex Hill, Lusaka, Zambia\n\nWe're available Monday-Friday, 8AM-5PM CAT. How else can I assist you?",
+                quickReplies: ['Book a meeting', 'Ask another question']
+            },
+            'moderation': {
+                response: "Our professional moderation services ensure your events achieve their objectives through:\n\n• Experienced facilitators\n• Structured engagement\n• Productive discussions\n• Clear outcomes\n\nWe've successfully moderated workshops for WWF, UNDP, GIZ, and many other organizations. Would you like examples of past events?",
+                quickReplies: ['Yes, show examples', 'Request quote']
+            },
+            'event planning': {
+                response: "Our event planning service includes:\n\n• Goal setting and consultation\n• Detailed planning and logistics\n• Vendor coordination\n• On-site management\n• Post-event analytics\n\nWe handle everything from corporate seminars to international conferences. What type of event are you planning?",
+                quickReplies: ['Corporate event', 'Workshop', 'Conference']
+            },
+            'photography': {
+                response: "Our professional photography services capture every important moment:\n\n• High-quality event documentation\n• Professional equipment\n• Quick turnaround\n• Multiple format delivery\n\nPerfect for conferences, workshops, and corporate events. Need a photographer for your event?",
+                quickReplies: ['Yes, book photographer', 'See portfolio']
+            },
+            'about': {
+                response: "BCM Consult is a proudly Zambian-owned company redefining excellence in event management. We're committed to:\n\n• Delivering outstanding service\n• Creating employment opportunities\n• Contributing to Africa's growth\n• Maintaining the highest standards\n\nWe've worked with 25+ prestigious clients across Africa. What would you like to know more about?",
+                quickReplies: ['Our values', 'Our team', 'Past projects']
+            },
+            'values': {
+                response: "Our core values guide everything we do:\n\n🤝 Integrity - Transparency and honesty\n⭐ Excellence - Superior quality\n💡 Innovation - Creative solutions\n🤲 Collaboration - Strong partnerships\n🌱 Empowerment - Growth opportunities\n♻️ Sustainability - Positive impact\n\nThese principles ensure we deliver exceptional results. Any questions?",
+                quickReplies: ['Learn more', 'Contact us']
+            },
+            'clients': {
+                response: "We've had the privilege of working with esteemed clients including:\n\n• WWF Zambia\n• UNDP Environment\n• GIZ\n• Oxfam Zambia\n• UNFCCC (COP Marrakech & Bonn)\n• Ministry of Green Economy\n• Council of Churches in Zambia\n\nAnd many more! These partnerships reflect our commitment to excellence. Interested in joining our client family?",
+                quickReplies: ['Yes, let\'s talk', 'See case studies']
+            }
+        };
+
+        function toggleChatbot() {
+            const container = document.getElementById('chatbotContainer');
+            container.classList.toggle('active');
+            if (container.classList.contains('active')) {
+                document.getElementById('chatInput').focus();
+            }
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            addMessage(message, 'user');
+            input.value = '';
+            
+            setTimeout(() => {
+                showTypingIndicator();
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    const response = generateResponse(message.toLowerCase());
+                    addMessage(response.text, 'bot', response.quickReplies);
+                }, 1500);
+            }, 300);
+        }
+
+        function handleChatKeypress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendQuickReply(topic) {
+            const topicMap = {
+                'services': 'Tell me about your services',
+                'pricing': 'What are your prices?',
+                'contact': 'How can I contact you?',
+                'Moderation': 'Tell me about moderation services',
+                'Event Planning': 'Tell me about event planning',
+                'Photography': 'Tell me about photography services',
+                'Yes, schedule consultation': 'I want to schedule a consultation',
+                'Tell me more': 'Tell me more about your services',
+                'Book a meeting': 'I want to book a meeting',
+                'Ask another question': 'I have another question',
+                'Yes, show examples': 'Show me examples of your work',
+                'Request quote': 'I need a quote',
+                'Corporate event': 'I\'m planning a corporate event',
+                'Workshop': 'I\'m planning a workshop',
+                'Conference': 'I\'m planning a conference',
+                'Yes, book photographer': 'I want to book a photographer',
+                'See portfolio': 'Show me your portfolio',
+                'Our values': 'Tell me about your values',
+                'Our team': 'Tell me about your team',
+                'Past projects': 'Show me past projects',
+                'Learn more': 'I want to learn more',
+                'Contact us': 'How can I contact you?',
+                'Yes, let\'s talk': 'I want to discuss a project',
+                'See case studies': 'Show me case studies'
+            };
+            
+            const message = topicMap[topic] || topic;
+            document.getElementById('chatInput').value = message;
+            sendMessage();
+        }
+
+        function addMessage(text, sender, quickReplies = []) {
+            const messagesContainer = document.getElementById('chatbotMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            let quickRepliesHTML = '';
+            if (quickReplies && quickReplies.length > 0) {
+                quickRepliesHTML = '<div class="quick-replies">';
+                quickReplies.forEach(reply => {
+                    quickRepliesHTML += `<button class="quick-reply" onclick="sendQuickReply('${reply}')">${reply}</button>`;
+                });
+                quickRepliesHTML += '</div>';
+            }
+            
+            messageDiv.innerHTML = `<div class="message-content">${text}${quickRepliesHTML}</div>`;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            const messagesContainer = document.getElementById('chatbotMessages');
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="message-content">
+                    <div class="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            `;
+            messagesContainer.appendChild(typingDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function hideTypingIndicator() {
+            const indicator = document.getElementById('typingIndicator');
+            if (indicator) {
+                indicator.remove();
+            }
+        }
+
+        function generateResponse(message) {
+            // Check for keywords
+            for (let key in chatbotKnowledge) {
+                if (message.includes(key)) {
+                    return {
+                        text: chatbotKnowledge[key].response,
+                        quickReplies: chatbotKnowledge[key].quickReplies || []
+                    };
+                }
+            }
+            
+            // Specific question patterns
+            if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
+                return {
+                    text: "Hello! 👋 Welcome to BCM Consult. I'm here to help you with any questions about our event management services. What would you like to know?",
+                    quickReplies: ['Our Services', 'Pricing', 'Contact Us']
+                };
+            }
+            
+            if (message.includes('quote') || message.includes('cost') || message.includes('price')) {
+                return {
+                    text: chatbotKnowledge.pricing.response,
+                    quickReplies: chatbotKnowledge.pricing.quickReplies
+                };
+            }
+            
+            if (message.includes('book') || message.includes('schedule') || message.includes('appointment')) {
+                return {
+                    text: "I'd be happy to help you schedule a consultation! Please contact us at:\n\n📞 +260 972 761 436\n📧 mumbab2014@gmail.com\n\nOr would you prefer I have someone call you back?",
+                    quickReplies: ['Call me back', 'I\'ll call you', 'Send email']
+                };
+            }
+            
+            if (message.includes('thank') || message.includes('thanks')) {
+                return {
+                    text: "You're welcome! 😊 Is there anything else I can help you with today?",
+                    quickReplies: ['Yes, another question', 'No, that\'s all']
+                };
+            }
+            
+            // Default response
+            return {
+                text: "I'd be happy to help you with that! For the most accurate information, I recommend:\n\n• Calling us: +260 972 761 436\n• Emailing: mumbab2014@gmail.com\n• Or exploring our services below\n\nWhat would you like to know more about?",
+                quickReplies: ['Our Services', 'About BCM', 'Contact Us']
+            };
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if(currentScroll > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style -->
