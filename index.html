@@ -23,29 +23,38 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
-            background: #fff;
+            padding: 1rem 5%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 0.8rem 5%;
         }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #1a1a1a;
+            text-decoration: none;
         }
 
-        .logo-icon {
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
+        .logo-image {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled .logo-image {
+            height: 45px;
         }
 
         nav ul {
@@ -169,6 +178,12 @@
             transition: all 0.5s ease;
             cursor: pointer;
             position: relative;
+        }
+
+        .rounded-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .rounded-image:nth-child(1) {
@@ -296,6 +311,12 @@
             overflow: hidden;
         }
 
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .service-card:hover .service-image {
             transform: scale(1.1) rotate(2deg);
         }
@@ -345,6 +366,12 @@
             transition: all 0.5s ease;
             cursor: pointer;
             position: relative;
+        }
+
+        .stat-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .stat-image:nth-child(1) {
@@ -441,6 +468,13 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+        }
+
+        .process-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
         }
 
         .process-image:hover {
@@ -610,6 +644,13 @@
             height: 200px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             transition: all 0.5s ease;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .blog-card:hover .blog-image {
@@ -980,9 +1021,9 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-      <a href="#home" class="logo">
-            <img src="bcm_logo.png" alt="BCM Logo" class="logo-image">
+    <header id="mainHeader">
+        <a href="#home" class="logo">
+            <img src="bcm_consult_webapp/logo.png" alt="BCM Consult Logo" class="logo-image">
         </a>
         <nav>
             <ul>
@@ -1006,9 +1047,15 @@
                 </div>
             </div>
             <div class="hero-images">
-                <div class="rounded-image"></div>
-                <div class="rounded-image"></div>
-                <div class="rounded-image"></div>
+                <div class="rounded-image">
+                    <img src="bcm_consult_webapp/speaker&cloud.jpg" alt="Event Management">
+                </div>
+                <div class="rounded-image">
+                    <img src="bcm_consult_webapp/speaker&partner.jpg" alt="Professional Services">
+                </div>
+                <div class="rounded-image">
+                    <img src="bcm_consult_webapp/speaker & panel.jpg" alt="Team Collaboration">
+                </div>
             </div>
         </div>
     </section>
@@ -1053,21 +1100,27 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-image"></div>
+                <div class="service-image">
+                    <img src="bcm_consult_webapp/speakerBVBW.jpg" alt="Moderation & Facilitation">
+                </div>
                 <div class="service-content">
                     <h3>Moderation & Facilitation</h3>
                     <p>Professional moderators to ensure your events achieve their objectives with structured engagement.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image"></div>
+                <div class="service-image">
+                    <img src="bcm_consult_webapp/speakerFV.jpg" alt="Event Planning">
+                </div>
                 <div class="service-content">
                     <h3>Event Planning & Design</h3>
                     <p>Comprehensive consultation to refine goals, define parameters, and plan seamless execution.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image"></div>
+                <div class="service-image">
+                    <img src="bcm_consult_webapp/reporting.jpg" alt="Report Writing">
+                </div>
                 <div class="service-content">
                     <h3>Report Writing</h3>
                     <p>Experienced personnel skilled in capturing proceedings and producing comprehensive reports.</p>
@@ -1080,8 +1133,12 @@
     <section class="stats">
         <div class="stats-content">
             <div class="stats-images">
-                <div class="stat-image"></div>
-                <div class="stat-image"></div>
+                <div class="stat-image">
+                    <img src="bcm_consult_webapp/cloud.jpg" alt="BCM Team">
+                </div>
+                <div class="stat-image">
+                    <img src="bcm_consult_webapp/team2.jpg" alt="BCM Success">
+                </div>
             </div>
             <div class="stats-text">
                 <p class="section-label">ABOUT US</p>
@@ -1129,7 +1186,9 @@
                     </div>
                 </div>
             </div>
-            <div class="process-image"></div>
+            <div class="process-image">
+                <img src="bcm_consult_webapp/process.jpg" alt="Our Process">
+            </div>
         </div>
     </section>
 
@@ -1190,7 +1249,9 @@
         </div>
         <div class="blog-grid">
             <div class="blog-card">
-                <div class="blog-image"></div>
+                <div class="blog-image">
+                    <img src="bcm_consult_webapp/blog1.jpg" alt="Event Moderation">
+                </div>
                 <div class="blog-content">
                     <span class="blog-tag">BLOG</span>
                     <h3>Mastering the art of event moderation and facilitation</h3>
@@ -1198,7 +1259,9 @@
                 </div>
             </div>
             <div class="blog-card">
-                <div class="blog-image"></div>
+                <div class="blog-image">
+                    <img src="bcm_consult_webapp/blog2.jpg" alt="Report Writing">
+                </div>
                 <div class="blog-content">
                     <span class="blog-tag">RESOURCES</span>
                     <h3>Best practices for professional report writing</h3>
@@ -1206,7 +1269,9 @@
                 </div>
             </div>
             <div class="blog-card">
-                <div class="blog-image"></div>
+                <div class="blog-image">
+                    <img src="bcm_consult_webapp/blog3.jpg" alt="Business Success">
+                </div>
                 <div class="blog-content">
                     <span class="blog-tag">GUIDE</span>
                     <h3>Transforming your business work into thriving success</h3>
@@ -1311,8 +1376,8 @@
             <button onclick="sendMessage()">Send</button>
         </div>
     </div>
-                                                                                                                                                                                               
-    <!-- <script>               
+
+    <script>
         // Chatbot Functionality
         const chatbotKnowledge = {
             'services': {
@@ -1528,5 +1593,11 @@
             
             if(currentScroll > 100) {
                 header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+                header.classList.add('scrolled');
             } else {
-                header.style -->
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+                header.classList.remove('scrolled');
+            }
+        });.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style
