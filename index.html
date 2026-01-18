@@ -878,17 +878,6 @@
                 -webkit-overflow-scrolling: touch;
                 padding-bottom: 1rem;
             }
-            .clients-logos::-webkit-scrollbar, .hero-images::-webkit-scrollbar, .stats-images::-webkit-scrollbar {
-                height: 8px;
-            }
-            .clients-logos::-webkit-scrollbar-thumb, .hero-images::-webkit-scrollbar-thumb, .stats-images::-webkit-scrollbar-thumb {
-                background: #ccc;
-                border-radius: 4px;
-            }
-            .client-logo, .rounded-image, .stat-image {
-                scroll-snap-align: start;
-                flex: 0 0 auto;
-            }
             .services-grid, .features-grid, .blog-grid {
                 display: flex;
                 flex-direction: row;
@@ -899,9 +888,21 @@
                 gap: 1rem;
                 padding-bottom: 1rem;
             }
+            .client-logo, .rounded-image, .stat-image {
+                scroll-snap-align: start;
+                flex: 0 0 auto;
+            }
             .service-card, .feature-card, .blog-card {
                 flex: 0 0 80%;
                 scroll-snap-align: start;
+            }
+            .clients-logos::-webkit-scrollbar, .hero-images::-webkit-scrollbar, .stats-images::-webkit-scrollbar,
+            .services-grid::-webkit-scrollbar, .features-grid::-webkit-scrollbar, .blog-grid::-webkit-scrollbar {
+                display: none;
+            }
+            .clients-logos, .hero-images, .stats-images, .services-grid, .features-grid, .blog-grid {
+                scrollbar-width: none;
+                -ms-overflow-style: none;
             }
         }
         @media (max-width: 768px) {
@@ -1662,6 +1663,39 @@
             } else {
                 alert('Please enter a valid email address.');
             }
+        }
+        // Auto-scrolling carousels on mobile
+        if (window.innerWidth <= 968) {
+            const carousels = document.querySelectorAll('.clients-logos, .hero-images, .stats-images, .services-grid, .features-grid, .blog-grid');
+            carousels.forEach(carousel => {
+                // Duplicate content for seamless loop
+                const items = Array.from(carousel.children);
+                items.forEach(item => {
+                    const clone = item.cloneNode(true);
+                    carousel.appendChild(clone);
+                });
+                // Animation setup
+                let scrolling = true;
+                let scrollPos = 0;
+                const speed = 1; // Adjust speed as needed
+                const originalWidth = carousel.scrollWidth / 2;
+                function animate() {
+                    if (scrolling) {
+                        scrollPos += speed;
+                        if (scrollPos >= originalWidth) {
+                            scrollPos -= originalWidth;
+                        }
+                        carousel.scrollLeft = scrollPos;
+                    }
+                    requestAnimationFrame(animate);
+                }
+                animate();
+                // Pause on interaction
+                carousel.addEventListener('touchstart', () => scrolling = false);
+                carousel.addEventListener('touchend', () => scrolling = true);
+                carousel.addEventListener('mousedown', () => scrolling = false);
+                carousel.addEventListener('mouseup', () => scrolling = true);
+            });
         }
     </script>
 </body>
