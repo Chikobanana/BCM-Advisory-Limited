@@ -10,14 +10,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #f8f9fa;
             color: #1a1a1a;
             line-height: 1.6;
         }
-
         /* Header */
         header {
             display: flex;
@@ -33,48 +31,40 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
-
         header.scrolled {
             background: rgba(255, 255, 255, 0.98);
             padding: 0.8rem 5%;
         }
-
         .logo {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             text-decoration: none;
         }
-
         .logo-image {
             height: 50px;
             width: auto;
             object-fit: contain;
             transition: all 0.3s ease;
         }
-
         header.scrolled .logo-image {
             height: 45px;
         }
-
         nav ul {
             display: flex;
             list-style: none;
             gap: 2.5rem;
             align-items: center;
         }
-
         nav a {
             text-decoration: none;
             color: #666;
             font-weight: 500;
             transition: color 0.3s;
         }
-
         nav a:hover {
             color: #1a1a1a;
         }
-
         .btn-contact {
             background: #1a1a1a;
             color: #fff !important;
@@ -82,12 +72,10 @@
             border-radius: 50px;
             transition: all 0.3s;
         }
-
         .btn-contact:hover {
             background: #333;
             transform: translateY(-2px);
         }
-
         /* Hero Section */
         .hero {
             margin-top: 80px;
@@ -96,7 +84,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -105,7 +92,6 @@
             gap: 4rem;
             align-items: center;
         }
-
         .hero-text h1 {
             font-size: 3.5rem;
             font-weight: 800;
@@ -113,20 +99,17 @@
             margin-bottom: 1.5rem;
             color: #1a1a1a;
         }
-
         .hero-text p {
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 2rem;
             max-width: 500px;
         }
-
         .hero-buttons {
             display: flex;
             gap: 1rem;
             align-items: center;
         }
-
         .btn-primary {
             background: #1a1a1a;
             color: #fff;
@@ -139,12 +122,10 @@
             text-decoration: none;
             display: inline-block;
         }
-
         .btn-primary:hover {
             background: #333;
             transform: translateY(-2px);
         }
-
         .watch-btn {
             display: flex;
             align-items: center;
@@ -157,18 +138,15 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-
         .watch-btn:hover {
             background: #45a049;
         }
-
         .hero-images {
             display: flex;
             gap: 1.5rem;
             align-items: center;
             perspective: 1000px;
         }
-
         .rounded-image {
             width: 180px;
             height: 320px;
@@ -179,32 +157,26 @@
             cursor: pointer;
             position: relative;
         }
-
         .rounded-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .rounded-image:nth-child(1) {
             background: linear-gradient(135deg, #c8e6c9, #81c784);
         }
-
         .rounded-image:nth-child(2) {
             background: linear-gradient(135deg, #b39ddb, #9575cd);
             margin-top: 50px;
         }
-
         .rounded-image:nth-child(3) {
             background: linear-gradient(135deg, #ffccbc, #ff8a65);
             margin-top: -30px;
         }
-
         .rounded-image:hover {
             transform: translateY(-15px) rotateY(10deg) scale(1.05);
             box-shadow: 0 30px 60px rgba(0,0,0,0.2);
         }
-
         /* Clients Section */
         .clients {
             background: #e8f4f8;
@@ -214,7 +186,6 @@
             max-width: 1400px;
             margin: 3rem auto;
         }
-
         .clients-logos {
             display: flex;
             justify-content: space-around;
@@ -222,7 +193,6 @@
             flex-wrap: wrap;
             gap: 2rem;
         }
-
         .client-logo {
             font-weight: 600;
             color: #333;
@@ -230,40 +200,35 @@
             align-items: center;
             gap: 0.5rem;
             font-size: 1.1rem;
+            flex: 0 0 auto;
         }
-
         /* Services Section */
         .services {
             padding: 5rem 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
-
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 3rem;
         }
-
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
             color: #1a1a1a;
         }
-
         .section-label {
             color: #666;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .nav-arrows {
             display: flex;
             gap: 0.5rem;
         }
-
         .nav-arrow {
             width: 40px;
             height: 40px;
@@ -276,18 +241,15 @@
             justify-content: center;
             transition: all 0.3s;
         }
-
         .nav-arrow:hover {
             background: #1a1a1a;
             color: #fff;
         }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
-
         .service-card {
             background: #fff;
             border-radius: 20px;
@@ -296,12 +258,10 @@
             transition: all 0.3s;
             cursor: pointer;
         }
-
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
-
         .service-image {
             width: 100%;
             height: 200px;
@@ -310,39 +270,32 @@
             position: relative;
             overflow: hidden;
         }
-
         .service-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .service-card:hover .service-image {
             transform: scale(1.1) rotate(2deg);
         }
-
         .service-content {
             padding: 1.5rem;
         }
-
         .service-content h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: #1a1a1a;
         }
-
         .service-content p {
             color: #666;
             font-size: 0.95rem;
             line-height: 1.6;
         }
-
         /* Stats Section */
         .stats {
             padding: 5rem 5%;
             background: #f8f9fa;
         }
-
         .stats-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -351,13 +304,11 @@
             gap: 4rem;
             align-items: center;
         }
-
         .stats-images {
             display: flex;
             gap: 1.5rem;
             perspective: 1000px;
         }
-
         .stat-image {
             width: 200px;
             height: 280px;
@@ -367,96 +318,79 @@
             cursor: pointer;
             position: relative;
         }
-
         .stat-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .stat-image:nth-child(1) {
             background: linear-gradient(135deg, #c8e6c9, #81c784);
         }
-
         .stat-image:nth-child(2) {
             margin-top: 60px;
             background: linear-gradient(135deg, #b39ddb, #9575cd);
         }
-
         .stat-image:hover {
             transform: translateY(-20px) rotateY(15deg) scale(1.08);
             box-shadow: 0 30px 60px rgba(0,0,0,0.2);
         }
-
         .stats-text h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             color: #1a1a1a;
         }
-
         .stats-text p {
             color: #666;
             margin-bottom: 2rem;
         }
-
         .stat-item {
             margin-bottom: 2rem;
         }
-
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
             color: #1a1a1a;
             margin-bottom: 0.5rem;
         }
-
         .stat-label {
             color: #666;
             font-size: 0.95rem;
         }
-
         /* Process Section */
         .process {
             padding: 5rem 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
-
         .process-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
-
         .process-steps {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
-
         .step {
             display: flex;
             gap: 1.5rem;
         }
-
         .step-number {
             font-size: 2.5rem;
             font-weight: 700;
             color: #1a1a1a;
             min-width: 80px;
         }
-
         .step-content h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             color: #1a1a1a;
         }
-
         .step-content p {
             color: #666;
         }
-
         .process-image {
             background: linear-gradient(135deg, #e8f4f8, #c8e6f0);
             border-radius: 30px;
@@ -469,41 +403,34 @@
             position: relative;
             overflow: hidden;
         }
-
         .process-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 30px;
         }
-
         .process-image:hover {
             transform: scale(1.05) rotate(2deg);
             box-shadow: 0 30px 60px rgba(0,0,0,0.15);
         }
-
         /* Projects Section */
         .projects {
             padding: 5rem 5%;
             background: #1a3a3a;
             color: #fff;
         }
-
         .projects-content {
             max-width: 1400px;
             margin: 0 auto;
         }
-
         .projects h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-
         .projects p {
             color: #b0b0b0;
             margin-bottom: 2rem;
         }
-
         .projects-video {
             background: linear-gradient(135deg, #2a4a4a, #1a3535);
             border-radius: 20px;
@@ -516,16 +443,13 @@
             cursor: pointer;
             transition: all 0.5s ease;
         }
-
         .projects-video:hover {
             transform: scale(1.02);
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
         }
-
         .projects-video:hover .play-btn {
             transform: scale(1.2);
         }
-
         .play-btn {
             width: 80px;
             height: 80px;
@@ -538,7 +462,6 @@
             transition: all 0.3s;
             font-size: 1.5rem;
         }
-
         /* Features Section */
         .features {
             padding: 5rem 5%;
@@ -546,13 +469,11 @@
             margin: 0 auto;
             text-align: center;
         }
-
         .features h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #1a1a1a;
         }
-
         .features > p {
             color: #666;
             margin-bottom: 3rem;
@@ -560,14 +481,12 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
-
         .feature-card {
             background: #fff;
             padding: 3rem 2rem;
@@ -576,12 +495,10 @@
             transition: all 0.3s;
             cursor: pointer;
         }
-
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
-
         .feature-icon {
             width: 80px;
             height: 80px;
@@ -594,37 +511,31 @@
             font-size: 2.5rem;
             transition: all 0.5s ease;
         }
-
         .feature-card:hover .feature-icon {
             transform: rotateY(360deg) scale(1.1);
             background: linear-gradient(135deg, #667eea, #764ba2);
         }
-
         .feature-card h3 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
             color: #1a1a1a;
         }
-
         .feature-card p {
             color: #666;
             font-size: 0.95rem;
         }
-
         /* Blog Section */
         .blog {
             padding: 5rem 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
-
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
-
         .blog-card {
             background: #fff;
             border-radius: 20px;
@@ -633,12 +544,10 @@
             transition: all 0.3s;
             cursor: pointer;
         }
-
         .blog-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
-
         .blog-image {
             width: 100%;
             height: 200px;
@@ -646,21 +555,17 @@
             transition: all 0.5s ease;
             overflow: hidden;
         }
-
         .blog-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .blog-card:hover .blog-image {
             transform: scale(1.1);
         }
-
         .blog-content {
             padding: 1.5rem;
         }
-
         .blog-tag {
             display: inline-block;
             background: #1a1a1a;
@@ -670,13 +575,11 @@
             font-size: 0.8rem;
             margin-bottom: 1rem;
         }
-
         .blog-content h3 {
             font-size: 1.2rem;
             margin-bottom: 1rem;
             color: #1a1a1a;
         }
-
         .read-more {
             color: #666;
             text-decoration: none;
@@ -685,14 +588,12 @@
             gap: 0.5rem;
             font-weight: 600;
         }
-
         /* Newsletter Section */
         .newsletter {
             padding: 4rem 5%;
             background: #1a3a3a;
             color: #fff;
         }
-
         .newsletter-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -700,17 +601,14 @@
             grid-template-columns: 1fr 2fr;
             gap: 4rem;
         }
-
         .newsletter h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
         }
-
         .newsletter-form {
             display: flex;
             gap: 1rem;
         }
-
         .newsletter-form input {
             flex: 1;
             padding: 1rem 1.5rem;
@@ -718,7 +616,6 @@
             border: none;
             font-size: 1rem;
         }
-
         .newsletter-form button {
             background: #fff;
             color: #1a3a3a;
@@ -729,18 +626,15 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
         .newsletter-form button:hover {
             background: #f0f0f0;
             transform: translateY(-2px);
         }
-
         .social-icons {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
         }
-
         .social-icon {
             width: 40px;
             height: 40px;
@@ -752,27 +646,22 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
         .social-icon:hover {
             background: rgba(255,255,255,0.2);
             transform: translateY(-3px);
         }
-
         .footer-links {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
         }
-
         .footer-column h4 {
             margin-bottom: 1rem;
             font-size: 1.1rem;
         }
-
         .footer-column ul {
             list-style: none;
         }
-
         .footer-column a {
             color: #b0b0b0;
             text-decoration: none;
@@ -780,11 +669,9 @@
             margin-bottom: 0.5rem;
             transition: color 0.3s;
         }
-
         .footer-column a:hover {
             color: #fff;
         }
-
         /* Chatbot Styles */
         .chatbot-button {
             position: fixed;
@@ -805,12 +692,10 @@
             transition: all 0.3s;
             z-index: 1000;
         }
-
         .chatbot-button:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
         }
-
         .chatbot-container {
             position: fixed;
             bottom: 100px;
@@ -825,12 +710,10 @@
             z-index: 1000;
             overflow: hidden;
         }
-
         .chatbot-container.active {
             display: flex;
             animation: slideUp 0.3s ease;
         }
-
         @keyframes slideUp {
             from {
                 opacity: 0;
@@ -841,7 +724,6 @@
                 transform: translateY(0);
             }
         }
-
         .chatbot-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -850,11 +732,9 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .chatbot-header h3 {
             font-size: 1.2rem;
         }
-
         .chatbot-close {
             background: none;
             border: none;
@@ -862,60 +742,50 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-
         .chatbot-messages {
             flex: 1;
             padding: 1.5rem;
             overflow-y: auto;
             background: #f8f9fa;
         }
-
         .message {
             margin-bottom: 1rem;
             display: flex;
             gap: 0.5rem;
             animation: fadeIn 0.3s ease;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .message.bot {
             justify-content: flex-start;
         }
-
         .message.user {
             justify-content: flex-end;
         }
-
         .message-content {
             max-width: 70%;
             padding: 0.8rem 1.2rem;
             border-radius: 15px;
             line-height: 1.5;
         }
-
         .message.bot .message-content {
             background: white;
             color: #1a1a1a;
             border-bottom-left-radius: 5px;
         }
-
         .message.user .message-content {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-bottom-right-radius: 5px;
         }
-
         .quick-replies {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 0.5rem;
         }
-
         .quick-reply {
             background: white;
             border: 1px solid #667eea;
@@ -926,19 +796,16 @@
             font-size: 0.85rem;
             transition: all 0.3s;
         }
-
         .quick-reply:hover {
             background: #667eea;
             color: white;
         }
-
         .chatbot-input {
             padding: 1rem;
             border-top: 1px solid #e0e0e0;
             display: flex;
             gap: 0.5rem;
         }
-
         .chatbot-input input {
             flex: 1;
             padding: 0.8rem 1rem;
@@ -946,7 +813,6 @@
             border-radius: 25px;
             font-size: 0.95rem;
         }
-
         .chatbot-input button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -957,18 +823,15 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-
         .chatbot-input button:hover {
             opacity: 0.9;
             transform: translateY(-2px);
         }
-
         .typing-indicator {
             display: flex;
             gap: 5px;
             padding: 1rem;
         }
-
         .typing-indicator span {
             width: 8px;
             height: 8px;
@@ -976,45 +839,111 @@
             border-radius: 50%;
             animation: bounce 1.4s infinite ease-in-out;
         }
-
         .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
         .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
-
         @keyframes bounce {
             0%, 80%, 100% { transform: scale(0); }
             40% { transform: scale(1); }
         }
-
         /* Mobile Responsive */
         @media (max-width: 968px) {
             .hero-content, .stats-content, .process-grid {
                 grid-template-columns: 1fr;
             }
-
             .services-grid, .features-grid, .blog-grid {
                 grid-template-columns: 1fr;
             }
-
             .hero-text h1 {
                 font-size: 2.5rem;
             }
-
             nav ul {
                 display: none;
             }
-
             .newsletter-content {
                 grid-template-columns: 1fr;
             }
-
             .footer-links {
                 grid-template-columns: 1fr;
             }
-
             .chatbot-container {
                 width: calc(100% - 40px);
                 right: 20px;
                 left: 20px;
+            }
+            /* Mobile sliding for horizontal content */
+            .clients-logos, .hero-images, .stats-images {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 1rem;
+            }
+            .clients-logos::-webkit-scrollbar, .hero-images::-webkit-scrollbar, .stats-images::-webkit-scrollbar {
+                height: 8px;
+            }
+            .clients-logos::-webkit-scrollbar-thumb, .hero-images::-webkit-scrollbar-thumb, .stats-images::-webkit-scrollbar-thumb {
+                background: #ccc;
+                border-radius: 4px;
+            }
+            .client-logo, .rounded-image, .stat-image {
+                scroll-snap-align: start;
+                flex: 0 0 auto;
+            }
+            .services-grid, .features-grid, .blog-grid {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+            .service-card, .feature-card, .blog-card {
+                flex: 0 0 80%;
+                scroll-snap-align: start;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-images .rounded-image {
+                width: 140px;
+                height: 250px;
+            }
+            .stats-images .stat-image {
+                width: 160px;
+                height: 220px;
+            }
+            .process-image {
+                height: 300px;
+            }
+            .projects-video {
+                height: 300px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 5% 2rem;
+            }
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .chatbot-container {
+                height: 80vh;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+            }
+            .chatbot-button {
+                bottom: 20px;
+                right: 20px;
             }
         }
     </style>
@@ -1023,7 +952,7 @@
     <!-- Header -->
     <header id="mainHeader">
         <a href="#home" class="logo">
-            <img src="bcm_consult_webapp/logo.png" alt="BCM Consult Logo" class="logo-image">
+            <img src="bcm_consult_webapp/bcm_logo.png" alt="BCM Consult Logo" class="logo-image">
         </a>
         <nav>
             <ul>
@@ -1034,7 +963,6 @@
             </ul>
         </nav>
     </header>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
@@ -1059,7 +987,6 @@
             </div>
         </div>
     </section>
-
     <!-- Clients Section -->
     <section class="clients">
         <div class="clients-logos">
@@ -1085,7 +1012,6 @@
             </div>
         </div>
     </section>
-
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-header">
@@ -1128,7 +1054,6 @@
             </div>
         </div>
     </section>
-
     <!-- Stats Section -->
     <section class="stats">
         <div class="stats-content">
@@ -1155,7 +1080,6 @@
             </div>
         </div>
     </section>
-
     <!-- Process Section -->
     <section class="process">
         <div class="process-grid">
@@ -1191,7 +1115,6 @@
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
     <section class="projects">
         <div class="projects-content">
@@ -1203,7 +1126,6 @@
             </div>
         </div>
     </section>
-
     <!-- Features Section -->
     <section class="features">
         <h2>Core values that<br>guide our work</h2>
@@ -1238,7 +1160,6 @@
             </div>
         </div>
     </section>
-
     <!-- Blog Section -->
     <section class="blog">
         <div class="section-header">
@@ -1280,7 +1201,6 @@
             </div>
         </div>
     </section>
-
     <!-- Newsletter Section -->
     <section class="newsletter" id="contact">
         <div class="newsletter-content">
@@ -1350,10 +1270,9 @@
             </div>
         </div>
     </section>
-
     <!-- Chatbot -->
     <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
-    
+   
     <div class="chatbot-container" id="chatbotContainer">
         <div class="chatbot-header">
             <h3>BCM Consult Assistant</h3>
@@ -1376,7 +1295,6 @@
             <button onclick="sendMessage()">Send</button>
         </div>
     </div>
-
     <script>
         // Chatbot Functionality
         const chatbotKnowledge = {
@@ -1415,9 +1333,80 @@
             'clients': {
                 response: "We've had the privilege of working with esteemed clients including:\n\n• WWF Zambia\n• UNDP Environment\n• GIZ\n• Oxfam Zambia\n• UNFCCC (COP Marrakech & Bonn)\n• Ministry of Green Economy\n• Council of Churches in Zambia\n\nAnd many more! These partnerships reflect our commitment to excellence. Interested in joining our client family?",
                 quickReplies: ['Yes, let\'s talk', 'See case studies']
+            },
+            'report writing': {
+                response: "Our report writing services provide:\n\n• Comprehensive documentation\n• Accurate capture of proceedings\n• Professional formatting\n• Actionable insights\n\nIdeal for conferences, workshops, and meetings. Would you like to see sample reports?",
+                quickReplies: ['Yes, show samples', 'Request quote']
+            },
+            'diary management': {
+                response: "We offer efficient diary management to keep your schedule organized:\n\n• Appointment scheduling\n• Conflict resolution\n• Reminders and follow-ups\n• Integration with digital tools\n\nPerfect for busy professionals. How can we assist with your scheduling needs?",
+                quickReplies: ['Learn more', 'Get started']
+            },
+            'workshop facilitation': {
+                response: "Our strategic workshop facilitation includes:\n\n• Interactive sessions\n• Goal-oriented activities\n• Expert guidance\n• Measurable outcomes\n\nWe've facilitated workshops for international organizations. What kind of workshop do you need?",
+                quickReplies: ['Strategic planning', 'Team building', 'Training']
+            },
+            'podcast production': {
+                response: "Our podcast production services cover:\n\n• Concept development\n• Recording and editing\n• Distribution strategy\n• Guest coordination\n\nGreat for thought leadership in event management. Interested in starting a podcast?",
+                quickReplies: ['Yes, let\'s discuss', 'See examples']
+            },
+            'corporate event': {
+                response: "For corporate events, we provide end-to-end management:\n\n• Venue selection\n• Agenda development\n• AV setup\n• Catering coordination\n• Attendee management\n\nWhat is the scale of your corporate event?",
+                quickReplies: ['Small (under 50)', 'Medium (50-200)', 'Large (200+)']
+            },
+            'workshop': {
+                response: "Our workshop services focus on interactive learning:\n\n• Custom content design\n• Participant engagement\n• Materials preparation\n• Feedback collection\n\nTell me more about your workshop topic.",
+                quickReplies: ['Environmental', 'Business', 'Other']
+            },
+            'conference': {
+                response: "We specialize in conference management:\n\n• Speaker coordination\n• Registration systems\n• Logistics planning\n• Virtual/hybrid options\n\nHow many attendees are you expecting?",
+                quickReplies: ['Under 100', '100-500', '500+']
+            },
+            'yes, show examples': {
+                response: "Here are some examples:\n\n• WWF Climate Workshop in Lusaka\n• UNDP Environmental Seminar\n• GIZ Strategic Planning Session\n\nWould you like more details on any?",
+                quickReplies: ['WWF', 'UNDP', 'GIZ']
+            },
+            'request quote': {
+                response: "To provide an accurate quote, please tell me more about your needs:\n\n• Event type\n• Date and duration\n• Number of participants\n• Specific services required\n\nAlternatively, email us at mumbab2014@gmail.com",
+                quickReplies: ['Provide details', 'Contact via email']
+            },
+            'yes, book photographer': {
+                response: "Great! To book a photographer:\n\nPlease provide:\n• Event date and time\n• Location\n• Duration\n• Special requirements\n\nOr call us at +260 972 761 436",
+                quickReplies: ['Provide details', 'Call now']
+            },
+            'see portfolio': {
+                response: "Our portfolio showcases various events we've captured. You can view samples on our website or request via email. Would you like me to send some examples?",
+                quickReplies: ['Yes, send examples', 'Visit website']
+            },
+            'our team': {
+                response: "Our team consists of experienced professionals:\n\n• Event planners with 10+ years\n• Certified moderators\n• Professional photographers\n• Report writing experts\n\nAll dedicated to excellence. Interested in meeting the team?",
+                quickReplies: ['Yes', 'No']
+            },
+            'past projects': {
+                response: "Notable past projects:\n\n• UNFCCC COP in Marrakech\n• Oxfam Zambia Workshops\n• Council of Churches Events\n• Ministry of Green Economy Seminars\n\nWhich one interests you?",
+                quickReplies: ['UNFCCC', 'Oxfam', 'Other']
+            },
+            'yes, let\'s talk': {
+                response: "Excellent! Let's discuss your project. Please share some details or schedule a call.",
+                quickReplies: ['Share details', 'Schedule call']
+            },
+            'see case studies': {
+                response: "Our case studies demonstrate our impact. For example:\n\n• Increased engagement by 40% for WWF events\n• Streamlined reporting for UNDP\n\nRequest full case studies via email?",
+                quickReplies: ['Yes', 'No']
+            },
+            'book a meeting': {
+                response: "To book a meeting, please suggest a preferred time or contact us directly at +260 972 761 436.",
+                quickReplies: ['Suggest time', 'Contact now']
+            },
+            'yes, schedule consultation': {
+                response: "Perfect! When would you like to schedule the consultation? We're available Mon-Fri, 8AM-5PM CAT.",
+                quickReplies: ['Morning', 'Afternoon', 'Specific time']
+            },
+            'tell me more': {
+                response: "Sure! What specific aspect of our services would you like more information on?",
+                quickReplies: ['Services list', 'Pricing factors', 'Client testimonials']
             }
         };
-
         function toggleChatbot() {
             const container = document.getElementById('chatbotContainer');
             container.classList.toggle('active');
@@ -1425,16 +1414,15 @@
                 document.getElementById('chatInput').focus();
             }
         }
-
         function sendMessage() {
             const input = document.getElementById('chatInput');
             const message = input.value.trim();
-            
+           
             if (!message) return;
-            
+           
             addMessage(message, 'user');
             input.value = '';
-            
+           
             setTimeout(() => {
                 showTypingIndicator();
                 setTimeout(() => {
@@ -1444,13 +1432,11 @@
                 }, 1500);
             }, 300);
         }
-
         function handleChatKeypress(event) {
             if (event.key === 'Enter') {
                 sendMessage();
             }
         }
-
         function sendQuickReply(topic) {
             const topicMap = {
                 'services': 'Tell me about your services',
@@ -1476,19 +1462,65 @@
                 'Learn more': 'I want to learn more',
                 'Contact us': 'How can I contact you?',
                 'Yes, let\'s talk': 'I want to discuss a project',
-                'See case studies': 'Show me case studies'
+                'See case studies': 'Show me case studies',
+                'Yes, show samples': 'Show me sample reports',
+                'Learn more': 'Tell me more about diary management',
+                'Get started': 'How to get started with diary management',
+                'Strategic planning': 'Tell me about strategic planning workshops',
+                'Team building': 'Tell me about team building',
+                'Training': 'Tell me about training workshops',
+                'Yes, let\'s discuss': 'Discuss podcast production',
+                'See examples': 'Show podcast examples',
+                'Small (under 50)': 'Small corporate event',
+                'Medium (50-200)': 'Medium corporate event',
+                'Large (200+)': 'Large corporate event',
+                'Environmental': 'Environmental workshop',
+                'Business': 'Business workshop',
+                'Other': 'Other workshop type',
+                'Under 100': 'Small conference',
+                '100-500': 'Medium conference',
+                '500+': 'Large conference',
+                'WWF': 'Details on WWF event',
+                'UNDP': 'Details on UNDP event',
+                'GIZ': 'Details on GIZ event',
+                'Provide details': 'Here are my details',
+                'Contact via email': 'I\'ll email you',
+                'Call now': 'I\'ll call now',
+                'Yes, send examples': 'Send photography examples',
+                'Visit website': 'Go to website',
+                'Yes': 'Yes, meet the team',
+                'No': 'No thanks',
+                'UNFCCC': 'Details on UNFCCC',
+                'Oxfam': 'Details on Oxfam',
+                'Other': 'Other projects',
+                'Share details': 'Here are project details',
+                'Schedule call': 'Schedule a call',
+                'Suggest time': 'Suggested time for meeting',
+                'Contact now': 'Contact immediately',
+                'Morning': 'Morning consultation',
+                'Afternoon': 'Afternoon consultation',
+                'Specific time': 'Specific time for consultation',
+                'Services list': 'Full services list',
+                'Pricing factors': 'More on pricing factors',
+                'Client testimonials': 'Show testimonials'
             };
-            
+           
             const message = topicMap[topic] || topic;
-            document.getElementById('chatInput').value = message;
-            sendMessage();
+            addMessage(message, 'user');
+            setTimeout(() => {
+                showTypingIndicator();
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    const response = generateResponse(message.toLowerCase());
+                    addMessage(response.text, 'bot', response.quickReplies);
+                }, 1500);
+            }, 300);
         }
-
         function addMessage(text, sender, quickReplies = []) {
             const messagesContainer = document.getElementById('chatbotMessages');
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${sender}`;
-            
+           
             let quickRepliesHTML = '';
             if (quickReplies && quickReplies.length > 0) {
                 quickRepliesHTML = '<div class="quick-replies">';
@@ -1497,12 +1529,11 @@
                 });
                 quickRepliesHTML += '</div>';
             }
-            
+           
             messageDiv.innerHTML = `<div class="message-content">${text}${quickRepliesHTML}</div>`;
             messagesContainer.appendChild(messageDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
         }
-
         function showTypingIndicator() {
             const messagesContainer = document.getElementById('chatbotMessages');
             const typingDiv = document.createElement('div');
@@ -1520,16 +1551,14 @@
             messagesContainer.appendChild(typingDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
         }
-
         function hideTypingIndicator() {
             const indicator = document.getElementById('typingIndicator');
             if (indicator) {
                 indicator.remove();
             }
         }
-
         function generateResponse(message) {
-            // Check for keywords
+            // Check for keywords in chatbotKnowledge
             for (let key in chatbotKnowledge) {
                 if (message.includes(key)) {
                     return {
@@ -1538,7 +1567,7 @@
                     };
                 }
             }
-            
+           
             // Specific question patterns
             if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
                 return {
@@ -1546,35 +1575,62 @@
                     quickReplies: ['Our Services', 'Pricing', 'Contact Us']
                 };
             }
-            
+           
             if (message.includes('quote') || message.includes('cost') || message.includes('price')) {
                 return {
                     text: chatbotKnowledge.pricing.response,
                     quickReplies: chatbotKnowledge.pricing.quickReplies
                 };
             }
-            
+           
             if (message.includes('book') || message.includes('schedule') || message.includes('appointment')) {
                 return {
                     text: "I'd be happy to help you schedule a consultation! Please contact us at:\n\n📞 +260 972 761 436\n📧 mumbab2014@gmail.com\n\nOr would you prefer I have someone call you back?",
                     quickReplies: ['Call me back', 'I\'ll call you', 'Send email']
                 };
             }
-            
+           
             if (message.includes('thank') || message.includes('thanks')) {
                 return {
                     text: "You're welcome! 😊 Is there anything else I can help you with today?",
                     quickReplies: ['Yes, another question', 'No, that\'s all']
                 };
             }
-            
+           
+            if (message.includes('report') || message.includes('writing')) {
+                return {
+                    text: chatbotKnowledge['report writing'].response,
+                    quickReplies: chatbotKnowledge['report writing'].quickReplies
+                };
+            }
+           
+            if (message.includes('diary') || message.includes('management')) {
+                return {
+                    text: chatbotKnowledge['diary management'].response,
+                    quickReplies: chatbotKnowledge['diary management'].quickReplies
+                };
+            }
+           
+            if (message.includes('workshop') || message.includes('facilitation')) {
+                return {
+                    text: chatbotKnowledge['workshop facilitation'].response,
+                    quickReplies: chatbotKnowledge['workshop facilitation'].quickReplies
+                };
+            }
+           
+            if (message.includes('podcast') || message.includes('production')) {
+                return {
+                    text: chatbotKnowledge['podcast production'].response,
+                    quickReplies: chatbotKnowledge['podcast production'].quickReplies
+                };
+            }
+           
             // Default response
             return {
                 text: "I'd be happy to help you with that! For the most accurate information, I recommend:\n\n• Calling us: +260 972 761 436\n• Emailing: mumbab2014@gmail.com\n• Or exploring our services below\n\nWhat would you like to know more about?",
                 quickReplies: ['Our Services', 'About BCM', 'Contact Us']
             };
         }
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1585,12 +1641,11 @@
                 }
             });
         });
-
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             const currentScroll = window.pageYOffset;
-            
+           
             if(currentScroll > 100) {
                 header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
                 header.classList.add('scrolled');
@@ -1598,6 +1653,16 @@
                 header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
                 header.classList.remove('scrolled');
             }
-        });.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+        });
+        // Newsletter submit (placeholder)
+        function submitNewsletter() {
+            const email = document.getElementById('emailInput').value;
+            if (email) {
+                alert(`Thank you for subscribing with ${email}!`);
             } else {
-                header.style
+                alert('Please enter a valid email address.');
+            }
+        }
+    </script>
+</body>
+</html>
